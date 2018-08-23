@@ -133,6 +133,8 @@ print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
 
 * This example defines a new structure called Cuboid, which represents a 3D rectangular box with width, height, and depth properties. This structure also has a read-only computed property called volume, which calculates and returns the current volume of the cuboid. It doesn’t make sense for volume to be settable, because it would be ambiguous as to which values of width, height, and depth should be used for a particular volume value. Nonetheless, it is useful for a Cuboid to provide a read-only computed property to enable external users to discover its current calculated volume.
 
+## ★ Property Observers - 프토퍼티 옵저버
+
 ## ★ ARC (Auto Reference Counting)
 * iOS는 레퍼런스 카운팅을 통해 레퍼런스가 더 이상 사용되지 않는 시점을 결정하여 레퍼런스가 할당받아 사용하던 메모리를 해제할 수 있도록 만듭니다. 개념적으로 간단한 것으로 프로퍼티, 상수, 변수에 레퍼런스가 지정되면 때 여기에 들어있는 카운트를 증가시키고 프로퍼티, 상수, 변수가 해제되면 카운트를 감소시킵니다. 보유한 카운트가 0이 되면 메모리를 해제시킵니다.
 
