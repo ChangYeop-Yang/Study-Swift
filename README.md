@@ -44,6 +44,41 @@ Swift는 Apple이 iOS, Mac, Apple TV 그리고 Apple Watch 앱 개발용으로 �
 * 상수 및 변수를 사용해서 정의 기능을 제공한다.
 * 클래스와 구조체에서는 사용이 가능하지만, 열거형에서는 사용할 수 없다.
 
+**⌘ Lazy Stored Properties - 지연 저장 프로퍼티**
+* A lazy stored property is a property whose initial value is not calculated until the first time it is used. You indicate a lazy stored property by writing the lazy modifier before its declaration.
+  
+  Lazy properties are useful when the initial value for a property is dependent on outside factors whose values are not known until after an instance’s initialization is complete. Lazy properties are also useful when the initial value for a property requires complex or computationally expensive setup that should not be performed unless or until it is needed.
+
+* 클래스 인스턴스가 생성되어 모든 저장 프로퍼티가 만들어지더라도 lazy 키워드가 붙은 프로퍼티는 선언만 될 뿐 초기화되지 않고 계속 대기하고 잇다가 프로퍼티가 호출되는 순간에 초기화 된다. 이처럼 호출되기 전에는 선언만 된 상태로 대기하다가 실제로 호출되는 시점에서 초기화가 이루어지는 저장 프로퍼티를 지연 저장 프로퍼티라 한다.
+
+```swift
+class DataImporter {
+    /*
+    DataImporter is a class to import data from an external file.
+    The class is assumed to take a nontrivial amount of time to initialize.
+    */
+    var filename = "data.txt"
+    // the DataImporter class would provide data importing functionality here
+}
+
+class DataManager {
+    lazy var importer = DataImporter()
+    var data = [String]()
+    // the DataManager class would provide data management functionality here
+}
+
+let manager = DataManager()
+manager.data.append("Some data")
+manager.data.append("Some more data")
+// the DataImporter instance for the importer property has not yet been created
+
+print(manager.importer.filename)
+// the DataImporter instance for the importer property has now been created
+// Prints "data.txt"
+```
+
+* * *
+
 **⌘ Computed Properties - 연산 프로퍼티**
 * 특정 연산을 통해 값을 만들어 제공하는 역할을 제공한다.
 * 변수만 사용해서 정의 기능을 제공한다.
