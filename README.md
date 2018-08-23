@@ -33,7 +33,23 @@ Swift는 Apple이 iOS, Mac, Apple TV 그리고 Apple Watch 앱 개발용으로 �
   * 클래스 인스턴스는 여러곳에서 동시 참조가 가능하므로 한 곳에서의 참조가 완료되었다고 해도 마음대로 메모리 해제를 할 수 없는 특징이 있다. 다른 곳에서 해당 인스턴스를 계속 참조하고 있기 때문이다. 이를 방치할 경우 잘못된 메모리 참조 오류가 발생한다.
 
 ## ★ Property - 프로퍼티
-클래스나 구조체에 값을 제공한다.
+* 프로퍼티는 클래스나 구조체에 값을 제공하며 저장 프로퍼티와 연산 프로퍼티가 존재한다.
+
+* Properties associate values with a particular class, structure, or enumeration. Stored properties store constant and variable values as part of an instance, whereas computed properties calculate (rather than store) a value. Computed properties are provided by classes, structures, and enumerations. Stored properties are provided only by classes and structures.
+
+  Stored and computed properties are usually associated with instances of a particular type. However, properties can also be associated with the type itself. Such properties are known as type properties.
+
+  In addition, you can define property observers to monitor changes in a property’s value, which you can respond to with custom actions. Property observers can be added to stored properties you define yourself, and also to properties that a subclass inherits from its superclass.
+
+**⌘ Stored Properties - 저장 프로퍼티**
+* 입력된 값을 저장하거나 저장된 값을 제공하는 역할을 제공한다.
+* 상수 및 변수를 사용해서 정의 기능을 제공한다.
+* 클래스와 구조체에서는 사용이 가능하지만, 열거형에서는 사용할 수 없다.
+
+**⌘ Computed Properties - 연산 프로퍼티**
+* 특정 연산을 통해 값을 만들어 제공하는 역할을 제공한다.
+* 변수만 사용해서 정의 기능을 제공한다.
+* 클래스, 구조체, 열거형 모두에서 사용 가능하다.
 
 ## ★ ARC (Auto Reference Counting)
 * iOS는 레퍼런스 카운팅을 통해 레퍼런스가 더 이상 사용되지 않는 시점을 결정하여 레퍼런스가 할당받아 사용하던 메모리를 해제할 수 있도록 만듭니다. 개념적으로 간단한 것으로 프로퍼티, 상수, 변수에 레퍼런스가 지정되면 때 여기에 들어있는 카운트를 증가시키고 프로퍼티, 상수, 변수가 해제되면 카운트를 감소시킵니다. 보유한 카운트가 0이 되면 메모리를 해제시킵니다.
