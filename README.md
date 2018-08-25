@@ -241,6 +241,10 @@ class SomeClass {
 
 * Private access restricts the use of an entity to the enclosing declaration, and to extensions of that declaration that are in the same file. Use private access to hide the implementation details of a specific piece of functionality when those details are used only within a single declaration.
 
+## ★ Protocol - 프로토콜
+
+## ★ Delegate Pattern - 델리게이트 패턴
+
 ## ★ Reference
 * [스위프트 ARC와 순환참조와 클로저 - Out of Bedlam](https://outofbedlam.github.io/swift/2016/01/31/Swift-ARC-Closure-weakself/)
 * [꼼꼼한 재은 씨의 Swift 문법편 - Naver Book](https://book.naver.com/bookdb/book_detail.nhn?bid=12864380)
