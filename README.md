@@ -134,11 +134,85 @@ print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
 * This example defines a new structure called Cuboid, which represents a 3D rectangular box with width, height, and depth properties. This structure also has a read-only computed property called volume, which calculates and returns the current volume of the cuboid. It doesn’t make sense for volume to be settable, because it would be ambiguous as to which values of width, height, and depth should be used for a particular volume value. Nonetheless, it is useful for a Cuboid to provide a read-only computed property to enable external users to discover its current calculated volume.
 
 ## ★ Property Observers - 프토퍼티 옵저버
+* 프로퍼티 옵저버는 프로퍼티의 값을 직접 변경하거나 시스템에 의해 자동으로 변경하는 경우에 상관없이 일단 프로퍼티의 값이 설정되면 호출된다. 심지어 프로퍼티에 현재와 동일한 값이 재할당이 되어도 호출된다. 예를 들어 저장 프로퍼티에 값을 대입하는 구문이 수행되거나 연산 프로퍼티에서 set 구문이 실행되는 모든 경우에 프로퍼티 옵저버가 호출된다.
+
+* 프로퍼티 옵저버에는 willSet와 didSet이 존재한다. willSet은 프로퍼티의 값이 변경되기 직전에 호출되는 옵저버이고 didSet은 프로퍼티의 값이 변경된 직후에 호출되는 옵저버이다.
+
+* The willSet and didSet observers of superclass properties are called when a property is set in a subclass initializer, after the superclass initializer has been called. They are not called while a class is setting its own properties, before the superclass initializer has been called.
+
+```swift
+class StepCounter {
+    var totalSteps: Int = 0 {
+        willSet(newTotalSteps) {
+            print("About to set totalSteps to \(newTotalSteps)")
+        }
+        didSet {
+            if totalSteps > oldValue  {
+                print("Added \(totalSteps - oldValue) steps")
+            }
+        }
+    }
+}
+let stepCounter = StepCounter()
+stepCounter.totalSteps = 200
+// About to set totalSteps to 200
+// Added 200 steps
+stepCounter.totalSteps = 360
+// About to set totalSteps to 360
+// Added 160 steps
+stepCounter.totalSteps = 896
+// About to set totalSteps to 896
+// Added 536 steps
+```
+
+## ★ Type Property - 타입 프로퍼티
+* 인스턴스를 생성하지 않고 클래스나 구조체 자체에 값을 저장하게 되며 이를 타입 프로퍼티(Type Property)라고 한다.
+
+* 타입 프로퍼티(Type Property)은 클래스나 구조체의 인스턴스에 속하는 값이 아니라 클래스나 구조체 자체에 속하는 값이므로 인스턴스를 생성하지 않고 클래스나 구조체 자체에 저장하게 되며, 저장된 값은 모든 인스턴스가 공통으로 사용할 수 있다.
+
+* 인스턴스 프로퍼티는 개별 인스턴스마다 다른 값을 저장할 수 있어서 하나의 인스턴스에서 변경한 프로퍼티의 값은 그 인스턴스 내에서만 유지될 뿐 나머지 인스턴스에 영향을 미치지 않지만, 타입 프로퍼티는 인스턴스가 아무리 많더라도 모든 인스턴스가 하나의 값을 공용으로 사용한다. 또한 스위프트에서 타입 프로퍼티는 클래스나 구조체, 열거형 객체 내에 선언하는 것이므로 선언된 객체 내에서만 접근 가능한 범위를 가진다.
+
+```swift
+struct SomeStructure {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 1
+    }
+}
+enum SomeEnumeration {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 6
+    }
+}
+class SomeClass {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 27
+    }
+    class var overrideableComputedTypeProperty: Int {
+        return 107
+    }
+}
+```
 
 ## ★ ARC (Auto Reference Counting)
 * iOS는 레퍼런스 카운팅을 통해 레퍼런스가 더 이상 사용되지 않는 시점을 결정하여 레퍼런스가 할당받아 사용하던 메모리를 해제할 수 있도록 만듭니다. 개념적으로 간단한 것으로 프로퍼티, 상수, 변수에 레퍼런스가 지정되면 때 여기에 들어있는 카운트를 증가시키고 프로퍼티, 상수, 변수가 해제되면 카운트를 감소시킵니다. 보유한 카운트가 0이 되면 메모리를 해제시킵니다.
 
 * 인스턴스를 모니터링하면서 변수나 상수, 함수의 인자값으로 할당되면 카운트를 1증가시키고 해당 변수나 상수들이 종료되면 카운트를 1 감소시키는 작업을 계속하면서 인스턴스의 참조 수를 계산한다. 이 과정에서 인스턴스의 참조 카운트가 0이 되면 메모리 해제 대상으로 간주하여 적절히 메모리에서 해제한다.
+
+## ★ Etc
+* 옵셔널 (Optinal)은 프로그램의 안정성을 높이기 위한 개념으로서 nil을 사용할 수 있는 타입과 사용할 수 없는 타입으로 구분하고 사용할 수 있는 타입을 가리켜 옵셔널 타입 (Optional Type)이라고 한다.
+
+## ★ Access Control - 접근제어 지시자
+
+* Open access and public access enable entities to be used within any source file from their defining module, and also in a source file from another module that imports the defining module. You typically use open or public access when specifying the public interface to a framework. The difference between open and public access is described below.
+
+* Internal access enables entities to be used within any source file from their defining module, but not in any source file outside of that module. You typically use internal access when defining an app’s or a framework’s internal structure.
+
+* File-private access restricts the use of an entity to its own defining source file. Use file-private access to hide the implementation details of a specific piece of functionality when those details are used within an entire file.
+
+* Private access restricts the use of an entity to the enclosing declaration, and to extensions of that declaration that are in the same file. Use private access to hide the implementation details of a specific piece of functionality when those details are used only within a single declaration.
 
 ## ★ Reference
 * [스위프트 ARC와 순환참조와 클로저 - Out of Bedlam](https://outofbedlam.github.io/swift/2016/01/31/Swift-ARC-Closure-weakself/)
