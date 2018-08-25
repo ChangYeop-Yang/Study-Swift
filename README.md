@@ -131,7 +131,7 @@ print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
 // Prints "the volume of fourByFiveByTwo is 40.0"
 ```
 
-* This example defines a new structure called Cuboid, which represents a 3D rectangular box with width, height, and depth properties. This structure also has a read-only computed property called volume, which calculates and returns the current volume of the cuboid. It doesn’t make sense for volume to be settable, because it would be ambiguous as to which values of width, height, and depth should be used for a particular volume value. Nonetheless, it is useful for a Cuboid to provide a read-only computed property to enable external users to discover its current calculated volume.
+> This example defines a new structure called Cuboid, which represents a 3D rectangular box with width, height, and depth properties. This structure also has a read-only computed property called volume, which calculates and returns the current volume of the cuboid. It doesn’t make sense for volume to be settable, because it would be ambiguous as to which values of width, height, and depth should be used for a particular volume value. Nonetheless, it is useful for a Cuboid to provide a read-only computed property to enable external users to discover its current calculated volume.
 
 ## ★ Property Observers - 프토퍼티 옵저버
 * 프로퍼티 옵저버는 프로퍼티의 값을 직접 변경하거나 시스템에 의해 자동으로 변경하는 경우에 상관없이 일단 프로퍼티의 값이 설정되면 호출된다. 심지어 프로퍼티에 현재와 동일한 값이 재할당이 되어도 호출된다. 예를 들어 저장 프로퍼티에 값을 대입하는 구문이 수행되거나 연산 프로퍼티에서 set 구문이 실행되는 모든 경우에 프로퍼티 옵저버가 호출된다.
@@ -203,6 +203,21 @@ class SomeClass {
 
 ## ★ Etc
 * 옵셔널 (Optinal)은 프로그램의 안정성을 높이기 위한 개념으로서 nil을 사용할 수 있는 타입과 사용할 수 없는 타입으로 구분하고 사용할 수 있는 타입을 가리켜 옵셔널 타입 (Optional Type)이라고 한다.
+
+* 업 캐스팅 (Up Casting)
+1. 하위 클래스 타입을 상위 클래스 타입으로 변환할 때
+2. 캐스팅하기 전 타입이 하위 클래스, 캐스팅한 후 타입이 상위 클래스일 때
+3. 캐스팅한 결과, 캐스팅하기 전 타입보다 추상화될 때
+4. 일반적으로 캐스팅 과정에서 오류가 발생할 가능성이 없다.
+
+* * *
+
+* 다운 캐스팅 (Down Casting)
+1. 상위 클래스 타입을 하위 클래스 타입으로 캐스팅할 때
+2. 캐스팅하기 전 타입이 상위 클래스, 캐스팅한 후 타입이 하위 클래스
+3. 캐스팅한 결과, 캐스팅하기 전 타입보다 구체화될 때
+4. 캐스팅 과정에서 오류가 발생할 가능성이 있다.
+5. 오류에 대한 처리 방식에 따라 옵셔널 캐스팅과 강제 캐스팅으로 나뉜다.
 
 ## ★ Access Control - 접근제어 지시자
 
