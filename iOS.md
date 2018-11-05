@@ -10,7 +10,7 @@
 * Your app’s current state defines what system resources are available to it. Because active apps are visible onscreen and must respond to user interactions, they have priority when it comes to using system resources. Background apps are not visible onscreen, and therefore have more limited access to system resources and receive limited execution time.
 
 <p align="center">
-  <img src="https://cdn-images-1.medium.com/max/1600/1*sPZcSyEjF5i3ZveWGkECfw.jpeg" width="350" height="350" />
+  <img src="https://docs-assets.developer.apple.com/published/cfb6ae10b1/high_level_flow_2x_2bc77269-019d-4554-83b8-6aeecb73c348.png" width="350" height="350" />
 </p>
 
 * Not Running - Either the application has not started yet or was running and has been terminated by the system.
@@ -22,6 +22,22 @@
 * Background - An application is running in the background and executing the code. Freshly launching apps directly enter into In-Active state and then to Active state. Apps that are suspended, will come back to this background state, and then transition to In-Active → Active states. In addition, an application being launched directly into the background enters this state instead of the inactive state.
 
 * Suspended - An application is in the background but is not executing the code. The system moves the application to this state automatically and does not notify. In case of low memory, the system may purge suspended application without notice to make free space for the foreground application. Usually after 5 secs spent in the background, apps will transition to Suspend state, but we can extend the time if app needs.
+
+#### # App Delegate Method
+* application:willFinishLaunchingWithOptions:—This method is your app’s first chance to execute code at launch time.
+
+* application:didFinishLaunchingWithOptions:—This method allows you to perform any final initialization before your app is displayed to the user.
+
+* applicationDidBecomeActive:—Lets your app know that it is about to become the foreground app. Use this method for any last minute preparation.
+
+* applicationWillResignActive:—Lets you know that your app is transitioning away from being the foreground app. Use this method to put your app into a quiescent state.
+
+* applicationDidEnterBackground:—Lets you know that your app is now running in the background and may be suspended at any time.
+
+* applicationWillEnterForeground:—Lets you know that your app is moving out of the background and back into the foreground, but that it is not yet active.
+
+* applicationWillTerminate:—Lets you know that your app is being terminated. This method is not called if your app is suspended.
+
 
 ## ★ ViewController Life Cycle
 
