@@ -24,19 +24,27 @@
 * Suspended - An application is in the background but is not executing the code. The system moves the application to this state automatically and does not notify. In case of low memory, the system may purge suspended application without notice to make free space for the foreground application. Usually after 5 secs spent in the background, apps will transition to Suspend state, but we can extend the time if app needs.
 
 #### # App Delegate Method
-* application:willFinishLaunchingWithOptions:—This method is your app’s first chance to execute code at launch time.
 
-* application:didFinishLaunchingWithOptions:—This method allows you to perform any final initialization before your app is displayed to the user.
+* application:willFinishLaunchingWithOptions:
+This method is your app’s first chance to execute code at launch time.
 
-* applicationDidBecomeActive:—Lets your app know that it is about to become the foreground app. Use this method for any last minute preparation.
+* application:didFinishLaunchingWithOptions:
+This method allows you to perform any final initialization before your app is displayed to the user.
 
-* applicationWillResignActive:—Lets you know that your app is transitioning away from being the foreground app. Use this method to put your app into a quiescent state.
+* applicationDidBecomeActive:
+Lets your app know that it is about to become the foreground app. Use this method for any last minute preparation.
 
-* applicationDidEnterBackground:—Lets you know that your app is now running in the background and may be suspended at any time.
+* applicationWillResignActive:
+Lets you know that your app is transitioning away from being the foreground app. Use this method to put your app into a quiescent state.
 
-* applicationWillEnterForeground:—Lets you know that your app is moving out of the background and back into the foreground, but that it is not yet active.
+* applicationDidEnterBackground:
+Lets you know that your app is now running in the background and may be suspended at any time.
 
-* applicationWillTerminate:—Lets you know that your app is being terminated. This method is not called if your app is suspended.
+* applicationWillEnterForeground:
+Lets you know that your app is moving out of the background and back into the foreground, but that it is not yet active.
+
+* applicationWillTerminate: 
+Lets you know that your app is being terminated. This method is not called if your app is suspended.
 
 
 ## ★ ViewController Life Cycle
