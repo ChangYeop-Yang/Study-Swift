@@ -245,9 +245,12 @@ class SomeClass {
 
 ## ★ Delegate Pattern - 델리게이트 패턴
 
+## ★ Difference Between Value Type and Reference Type in Swift
+
 ## ★ Reference
 * [스위프트 ARC와 순환참조와 클로저 - Out of Bedlam](https://outofbedlam.github.io/swift/2016/01/31/Swift-ARC-Closure-weakself/)
 * [꼼꼼한 재은 씨의 Swift 문법편 - Naver Book](https://book.naver.com/bookdb/book_detail.nhn?bid=12864380)
 * [일급 객체 - 위키백과](https://ko.wikipedia.org/wiki/%EC%9D%BC%EA%B8%89_%EA%B0%9D%EC%B2%B4)
 * [The Swift Programming Language - Swift community](https://swift.org/)
 * [Raywenderlich - iOS](https://www.raywenderlich.com/)
+* [Difference Between Value Type and Reference Type in Swift](https://medium.com/good-morning-swift/difference-between-value-type-and-reference-type-in-swift-1f2bd9dd32a7)
