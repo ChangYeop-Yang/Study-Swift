@@ -25,25 +25,25 @@
 
 #### # App Delegate Method
 
-* application:willFinishLaunchingWithOptions:
+* application:willFinishLaunchingWithOptions:</br>
 This method is your app’s first chance to execute code at launch time.
 
-* application:didFinishLaunchingWithOptions:
+* application:didFinishLaunchingWithOptions:</br>
 This method allows you to perform any final initialization before your app is displayed to the user.
 
-* applicationDidBecomeActive:
+* applicationDidBecomeActive:</br>
 Lets your app know that it is about to become the foreground app. Use this method for any last minute preparation.
 
-* applicationWillResignActive:
+* applicationWillResignActive:</br>
 Lets you know that your app is transitioning away from being the foreground app. Use this method to put your app into a quiescent state.
 
-* applicationDidEnterBackground:
+* applicationDidEnterBackground:</br>
 Lets you know that your app is now running in the background and may be suspended at any time.
 
-* applicationWillEnterForeground:
+* applicationWillEnterForeground:</br>
 Lets you know that your app is moving out of the background and back into the foreground, but that it is not yet active.
 
-* applicationWillTerminate: 
+* applicationWillTerminate:</br>
 Lets you know that your app is being terminated. This method is not called if your app is suspended.
 
 
