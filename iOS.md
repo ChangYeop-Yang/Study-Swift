@@ -9,6 +9,20 @@
 
 * Your app’s current state defines what system resources are available to it. Because active apps are visible onscreen and must respond to user interactions, they have priority when it comes to using system resources. Background apps are not visible onscreen, and therefore have more limited access to system resources and receive limited execution time.
 
+* * *
+
+#### # Manage Life Cycle Events
+
+* **Launch.** </br>Your app transitions from the not running to the inactive or background state. Use this transition to prepare your app to run.
+
+* **Activation.** </br>Your app transitions from the inactive to the active state. Prepare your app to run in the foreground and be visible onscreen.
+
+* **Deactivation.** </br>Your app transitions from the active to the inactive state. Quiet your app, perhaps only temporarily.
+
+* **Background execution.** </br>Your app transitions from the inactive or not running state to the background state. Prepare to handle only essential tasks while running offscreen.
+
+* **Termination.** </br>Your app transitions from any running state to the not running state. (Suspended apps are not notified when they are terminated.) Cancel all tasks and prepare to exit.
+
 <p align="center">
   <img src="https://docs-assets.developer.apple.com/published/cfb6ae10b1/high_level_flow_2x_2bc77269-019d-4554-83b8-6aeecb73c348.png" width="350" height="350" />
 </p>
@@ -22,6 +36,8 @@
 * Background - An application is running in the background and executing the code. Freshly launching apps directly enter into In-Active state and then to Active state. Apps that are suspended, will come back to this background state, and then transition to In-Active → Active states. In addition, an application being launched directly into the background enters this state instead of the inactive state.
 
 * Suspended - An application is in the background but is not executing the code. The system moves the application to this state automatically and does not notify. In case of low memory, the system may purge suspended application without notice to make free space for the foreground application. Usually after 5 secs spent in the background, apps will transition to Suspend state, but we can extend the time if app needs.
+
+* * *
 
 #### # App Delegate Method
 
@@ -45,7 +61,6 @@ Lets you know that your app is moving out of the background and back into the fo
 
 * applicationWillTerminate:</br>
 Lets you know that your app is being terminated. This method is not called if your app is suspended.
-
 
 ## ★ ViewController Life Cycle
 
