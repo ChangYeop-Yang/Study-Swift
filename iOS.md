@@ -25,6 +25,26 @@
 
 * * *
 
+#### # Manage Behavioral Events
+
+* **Memory warnings.** </br>Reduce the amount of memory your app uses; see Responding to Memory Warnings.
+
+* **Time changes.** </br>Update time-sensitive features of your app.
+
+* **Protected data becomes available/unavailable.** </br>Manage files when the user locks or unlocks the device.
+
+* **State restoration.** </br>Restore your app’s UI to its previous state, giving the appearance that your app never stopped running.
+
+* **Handoff tasks.** </br>Continue tasks started on another device.
+
+* **Open URLs.** </br>Receive and open URLs sent to your app.
+
+* **Inter-app communication.** </br>Receive data from a paired watchOS app.
+
+* **File downloads.** </br>Receive files that your app downloaded using a URLSession object.
+
+* * *
+
 <p align="center">
   <img src="https://docs-assets.developer.apple.com/published/cfb6ae10b1/high_level_flow_2x_2bc77269-019d-4554-83b8-6aeecb73c348.png" width="350" height="350" />
 </p>
