@@ -10,7 +10,7 @@
 * Your app’s current state defines what system resources are available to it. Because active apps are visible onscreen and must respond to user interactions, they have priority when it comes to using system resources. Background apps are not visible onscreen, and therefore have more limited access to system resources and receive limited execution time.
 
 <p align="center">
-  <img src="https://cdn-images-1.medium.com/max/1600/1*Iwe53lfhwwPO3_K1K1Glig.gif" width="350" height="350" />
+  <img src="https://cdn-images-1.medium.com/max/1600/1*sPZcSyEjF5i3ZveWGkECfw.jpeg" width="350" height="350" />
 </p>
 
 * Not Running - Either the application has not started yet or was running and has been terminated by the system.
