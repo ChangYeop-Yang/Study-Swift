@@ -269,13 +269,26 @@ x.data = 42						// changes the instance referred to by x (and y)
 println("\(x.data), \(y.data)")	// prints "42, 42"
 ```
 
-* Value Type — each instance keeps a unique copy of its data. A type that creates a new instance (copy) when assigned to a variable or constant, or when passed to a function.
+* **Value Type** - each instance keeps a unique copy of its data. A type that creates a new instance (copy) when assigned to a variable or constant, or when passed to a function.
 
-* Reference Type — each instances share a single copy of the data. A type that once initialized, when assigned to a variable or constant, or when passed to a function, returns a reference to the same existing instance.
+* **Reference Type** - each instances share a single copy of the data. A type that once initialized, when assigned to a variable or constant, or when passed to a function, returns a reference to the same existing instance.
 
 |Value Type|Reference Type|
 |:--------:|:------------:|
 |structures (including booleans, characters, integer numbers, floating-point numbers, fixed-point numbers, immutable strings, tuples, lists, dictionaries, sets, stacks, queues), enumerations (including optionals)|functions, classes, interfaces|
+
+* **In Swift, Array, String, and Dictionary are all value types.** They behave much like a simple int value in C, acting as a unique instance of that data. You don’t need to do anything special — such as making an explicit copy — to prevent other code from modifying that data behind your back. Importantly, you can safely pass copies of values across threads without synchronization. In the spirit of improving safety, this model will help you write more predictable code in Swift.
+
+###### ※ Use a value type when:
+
+* Comparing instance data with == makes sense
+* You want copies to have independent state
+* The data will be used in code across multiple threads
+
+###### ※ Use a reference type (e.g. use a class) when:
+
+* Comparing instance identity with === makes sense
+* You want to create shared, mutable state
 
 ## ★ Reference
 * [스위프트 ARC와 순환참조와 클로저 - Out of Bedlam](https://outofbedlam.github.io/swift/2016/01/31/Swift-ARC-Closure-weakself/)
