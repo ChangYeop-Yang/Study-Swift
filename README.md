@@ -201,15 +201,11 @@ class SomeClass {
 
 * 인스턴스를 모니터링하면서 변수나 상수, 함수의 인자값으로 할당되면 카운트를 1증가시키고 해당 변수나 상수들이 종료되면 카운트를 1 감소시키는 작업을 계속하면서 인스턴스의 참조 수를 계산한다. 이 과정에서 인스턴스의 참조 카운트가 0이 되면 메모리 해제 대상으로 간주하여 적절히 메모리에서 해제한다.
 
-* * *
-
 <p align="center">
   
 <img src="https://user-images.githubusercontent.com/20036523/44619524-df672200-a8c2-11e8-8ecd-fab5225754d3.png" >
 
 </p>
-
-* * *
 
 ## ★ Etc
 * 옵셔널 (Optinal)은 프로그램의 안정성을 높이기 위한 개념으로서 nil을 사용할 수 있는 타입과 사용할 수 없는 타입으로 구분하고 사용할 수 있는 타입을 가리켜 옵셔널 타입 (Optional Type)이라고 한다.
@@ -247,6 +243,10 @@ class SomeClass {
 
 ## ★ Difference Between Value Type and Reference Type in Swift
 
+|Value Type|Reference Type|
+|:--------:|:------------:|
+|structures (including booleans, characters, integer numbers, floating-point numbers, fixed-point numbers, immutable strings, tuples, lists, dictionaries, sets, stacks, queues), enumerations (including optionals)|functions, classes, interfaces|
+
 ## ★ Reference
 * [스위프트 ARC와 순환참조와 클로저 - Out of Bedlam](https://outofbedlam.github.io/swift/2016/01/31/Swift-ARC-Closure-weakself/)
 * [꼼꼼한 재은 씨의 Swift 문법편 - Naver Book](https://book.naver.com/bookdb/book_detail.nhn?bid=12864380)
@@ -254,3 +254,4 @@ class SomeClass {
 * [The Swift Programming Language - Swift community](https://swift.org/)
 * [Raywenderlich - iOS](https://www.raywenderlich.com/)
 * [Difference Between Value Type and Reference Type in Swift](https://medium.com/good-morning-swift/difference-between-value-type-and-reference-type-in-swift-1f2bd9dd32a7)
+* [Value type and reference type - ](https://en.wikipedia.org/wiki/Value_type_and_reference_type)
