@@ -245,7 +245,27 @@ class SomeClass {
 
 * Types in Swift fall into one of two categories: first, “value types”, where each instance keeps a unique copy of its data, usually defined as a struct, enum, or tuple. The second, “reference types”, where instances share a single copy of the data, and the type is usually defined as a class. In this post we explore the merits of value and reference types, and how to choose between them.
 
-* In computer programming, data types can be divided into two categories: value types and reference types. A value of value type is the actual value. A value of reference type is a reference to another value.
+###### ◆ Value type
+```swift
+// Value type example
+struct S { var data: Int = -1 }
+var a = S()
+var b = a						// a is copied to b
+a.data = 42						// Changes a, not b
+println("\(a.data), \(b.data)")	// prints "42, -1"
+```
+
+###### ◆ Reference type
+```swift
+// Reference type example
+class C { var data: Int = -1 }
+var x = C()
+var y = x						// x is copied to y
+x.data = 42						// changes the instance referred to by x (and y)
+println("\(x.data), \(y.data)")	// prints "42, 42"
+```
+
+* * *
 
 <p align="center">
   <img src="https://cdn-images-1.medium.com/max/1600/1*oiSNPErZHJ40FcWNTxAM0A.gif" />
