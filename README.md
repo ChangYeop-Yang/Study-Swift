@@ -243,6 +243,8 @@ class SomeClass {
 
 ## ★ [Difference Between Value Type and Reference Type in Swift](https://medium.com/@abhimuralidharan/difference-between-value-type-and-a-reference-type-in-ios-swift-18cb5145ad7a)
 
+* Types in Swift fall into one of two categories: first, “value types”, where each instance keeps a unique copy of its data, usually defined as a struct, enum, or tuple. The second, “reference types”, where instances share a single copy of the data, and the type is usually defined as a class. In this post we explore the merits of value and reference types, and how to choose between them.
+
 * In computer programming, data types can be divided into two categories: value types and reference types. A value of value type is the actual value. A value of reference type is a reference to another value.
 
 <p align="center">
@@ -266,3 +268,4 @@ class SomeClass {
 * [Difference Between Value Type and Reference Type in Swift](https://medium.com/good-morning-swift/difference-between-value-type-and-reference-type-in-swift-1f2bd9dd32a7)
 * [Value type and reference type - ](https://en.wikipedia.org/wiki/Value_type_and_reference_type)
 * [Difference between value type and a reference type in iOS swift?](https://medium.com/@abhimuralidharan/difference-between-value-type-and-a-reference-type-in-ios-swift-18cb5145ad7a)
+* [Value and Reference Types - Apple](https://developer.apple.com/swift/blog/?id=10)
