@@ -243,6 +243,10 @@ class SomeClass {
 
 ## ★ [Difference Between Value Type and Reference Type in Swift](https://medium.com/@abhimuralidharan/difference-between-value-type-and-a-reference-type-in-ios-swift-18cb5145ad7a)
 
+<p align="center">
+  <img src="https://cdn-images-1.medium.com/max/1600/1*oiSNPErZHJ40FcWNTxAM0A.gif" />
+</p>
+
 * Types in Swift fall into one of two categories: first, “value types”, where each instance keeps a unique copy of its data, usually defined as a struct, enum, or tuple. The second, “reference types”, where instances share a single copy of the data, and the type is usually defined as a class. In this post we explore the merits of value and reference types, and how to choose between them.
 
 ###### ◆ Value type
@@ -264,12 +268,6 @@ var y = x						// x is copied to y
 x.data = 42						// changes the instance referred to by x (and y)
 println("\(x.data), \(y.data)")	// prints "42, 42"
 ```
-
-* * *
-
-<p align="center">
-  <img src="https://cdn-images-1.medium.com/max/1600/1*oiSNPErZHJ40FcWNTxAM0A.gif" />
-</p>
 
 * Value Type — each instance keeps a unique copy of its data. A type that creates a new instance (copy) when assigned to a variable or constant, or when passed to a function.
 
