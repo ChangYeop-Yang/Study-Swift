@@ -247,7 +247,7 @@ class SomeClass {
   <img src="https://cdn-images-1.medium.com/max/1600/1*oiSNPErZHJ40FcWNTxAM0A.gif" />
 </p>
 
-* Types in Swift fall into one of two categories: first, “value types”, where each instance keeps a unique copy of its data, usually defined as a struct, enum, or tuple. The second, “reference types”, where instances share a single copy of the data, and the type is usually defined as a class. In this post we explore the merits of value and reference types, and how to choose between them.
+* Types in Swift fall into one of two categories: first, “value types”, where each instance keeps a unique copy of its data, usually defined as a struct, enum, or tuple. The second, “reference types”, where instances share a single copy of the data, and the type is usually defined as a class.
 
 ###### ◆ Value type
 ```swift
