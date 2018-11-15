@@ -279,6 +279,8 @@ println("\(x.data), \(y.data)")	// prints "42, 42"
 
 * **In Swift, Array, String, and Dictionary are all value types.** They behave much like a simple int value in C, acting as a unique instance of that data. You don’t need to do anything special — such as making an explicit copy — to prevent other code from modifying that data behind your back. Importantly, you can safely pass copies of values across threads without synchronization. In the spirit of improving safety, this model will help you write more predictable code in Swift.
 
+* As mentioned earlier, reference type instances are stored in heap and instances of a value type such as struct resides in a region of memory called stack. **If the value type instance is part of a class instance, the value is stored in the heap along with the class instance.**
+
 ###### ※ Use a value type when:
 
 * Comparing instance data with == makes sense
