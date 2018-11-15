@@ -241,7 +241,17 @@ class SomeClass {
 
 ## ★ Delegate Pattern - 델리게이트 패턴
 
-## ★ Difference Between Value Type and Reference Type in Swift
+## ★ [Difference Between Value Type and Reference Type in Swift](https://medium.com/@abhimuralidharan/difference-between-value-type-and-a-reference-type-in-ios-swift-18cb5145ad7a)
+
+* In computer programming, data types can be divided into two categories: value types and reference types. A value of value type is the actual value. A value of reference type is a reference to another value.
+
+<p align="center">
+  <img src="https://cdn-images-1.medium.com/max/1600/1*oiSNPErZHJ40FcWNTxAM0A.gif" />
+</p>
+
+* Value Type — each instance keeps a unique copy of its data. A type that creates a new instance (copy) when assigned to a variable or constant, or when passed to a function.
+
+* Reference Type — each instances share a single copy of the data. A type that once initialized, when assigned to a variable or constant, or when passed to a function, returns a reference to the same existing instance.
 
 |Value Type|Reference Type|
 |:--------:|:------------:|
@@ -255,3 +265,4 @@ class SomeClass {
 * [Raywenderlich - iOS](https://www.raywenderlich.com/)
 * [Difference Between Value Type and Reference Type in Swift](https://medium.com/good-morning-swift/difference-between-value-type-and-reference-type-in-swift-1f2bd9dd32a7)
 * [Value type and reference type - ](https://en.wikipedia.org/wiki/Value_type_and_reference_type)
+* [Difference between value type and a reference type in iOS swift?](https://medium.com/@abhimuralidharan/difference-between-value-type-and-a-reference-type-in-ios-swift-18cb5145ad7a)
