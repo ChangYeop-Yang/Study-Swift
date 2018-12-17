@@ -292,16 +292,25 @@ println("\(x.data), \(y.data)")	// prints "42, 42"
 * Comparing instance identity with === makes sense
 * You want to create shared, mutable state
 
-## ★ Reference
-* [스위프트 ARC와 순환참조와 클로저 - Out of Bedlam](https://outofbedlam.github.io/swift/2016/01/31/Swift-ARC-Closure-weakself/)
-* [꼼꼼한 재은 씨의 Swift 문법편 - Naver Book](https://book.naver.com/bookdb/book_detail.nhn?bid=12864380)
-* [일급 객체 - 위키백과](https://ko.wikipedia.org/wiki/%EC%9D%BC%EA%B8%89_%EA%B0%9D%EC%B2%B4)
-* [The Swift Programming Language - Swift community](https://swift.org/)
-* [Raywenderlich - iOS](https://www.raywenderlich.com/)
-* [Difference Between Value Type and Reference Type in Swift](https://medium.com/good-morning-swift/difference-between-value-type-and-reference-type-in-swift-1f2bd9dd32a7)
-* [Value type and reference type - ](https://en.wikipedia.org/wiki/Value_type_and_reference_type)
-* [Difference between value type and a reference type in iOS swift?](https://medium.com/@abhimuralidharan/difference-between-value-type-and-a-reference-type-in-ios-swift-18cb5145ad7a)
-* [Value and Reference Types - Apple](https://developer.apple.com/swift/blog/?id=10)
+## ★ REFERENCE
+
+:airplane: [스위프트 ARC와 순환참조와 클로저 - Out of Bedlam](https://outofbedlam.github.io/swift/2016/01/31/Swift-ARC-Closure-weakself/)
+
+:airplane: [꼼꼼한 재은 씨의 Swift 문법편 - Naver Book](https://book.naver.com/bookdb/book_detail.nhn?bid=12864380)
+
+:airplane: [일급 객체 - 위키백과](https://ko.wikipedia.org/wiki/%EC%9D%BC%EA%B8%89_%EA%B0%9D%EC%B2%B4)
+
+:airplane: [The Swift Programming Language - Swift community](https://swift.org/)
+
+:airplane: [Raywenderlich - iOS](https://www.raywenderlich.com/)
+
+:airplane: [Difference Between Value Type and Reference Type in Swift](https://medium.com/good-morning-swift/difference-between-value-type-and-reference-type-in-swift-1f2bd9dd32a7)
+
+:airplane: [Value type and reference type - ](https://en.wikipedia.org/wiki/Value_type_and_reference_type)
+
+:airplane: [Difference between value type and a reference type in iOS swift?](https://medium.com/@abhimuralidharan/difference-between-value-type-and-a-reference-type-in-ios-swift-18cb5145ad7a)
+
+:airplane: [Value and Reference Types - Apple](https://developer.apple.com/swift/blog/?id=10)
 
 ## ★ Developer Information
 
