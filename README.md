@@ -240,13 +240,19 @@ class SomeClass {
 
 ## ★ Protocol - 프로토콜
 
-## ★ Delegate Pattern - 델리게이트 패턴
+## ★ Delegate - 델리게이트
 
 |Delegates Image 001|Delegates Image 002|
 |:-----------------:|:-----------------:|
 |![](https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Art/delegation1.jpg)|![](https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Art/delegation2.jpg)|
 
 * A delegate is an object that acts on behalf of, or in coordination with, another object when that object encounters an event in a program. The delegating object is often a responder object—that is, an object inheriting from NSResponder in AppKit or UIResponder in UIKit—that is responding to a user event. The delegate is an object that is delegated control of the user interface for that event, or is at least asked to interpret the event in an application-specific manner. </br></br>To better appreciate the value of delegation, it helps to consider an off-the-shelf Cocoa object such as a text field (an instance of NSTextField or UITextField) or a table view (an instance of NSTableView or UITableView ). These objects are designed to fulfill a specific role in a generic fashion; a window object in the AppKit framework, for example, responds to mouse manipulations of its controls and handles such things as closing, resizing, and moving the physical window. This restricted and generic behavior necessarily limits what the object can know about how an event affects (or will affect) something elsewhere in the application, especially when the affected behavior is specific to your application. Delegation provides a way for your custom object to communicate application-specific behavior to the off-the-shelf object. </br></br>The programming mechanism of delegation gives objects a chance to coordinate their appearance and state with changes occurring elsewhere in a program, changes usually brought about by user actions. More importantly, delegation makes it possible for one object to alter the behavior of another object without the need to inherit from it. The delegate is almost always one of your custom objects, and by definition it incorporates application-specific logic that the generic and delegating object cannot possibly know itself.
+
+## ★ DataSource
+
+* **A data source is like a delegate except that, instead of being delegated control of the user interface, it is delegated control of data.** A data source is an outlet held by NSView and UIView objects such as table views and outline views that require a source from which to populate their rows of visible data. The data source for a view is usually the same object that acts as its delegate, but it can be any object. As with the delegate, the data source must implement one or more methods of an informal protocol to supply the view with the data it needs and, in more advanced implementations, to handle data that users directly edit in such views. </br><br/> As with delegates, data sources are objects that must be present to receive messages from the objects requesting data. The application that uses them must ensure their persistence, retaining them if necessary in memory-managed code. </br><br/> Data sources are responsible for the persistence of the objects they hand out to user-interface objects. In other words, they are responsible for the memory management of those objects. However, whenever a view object such as an outline view or table view accesses the data from a data source, it retains the objects as long as it uses the data. But it does not use the data for very long. Typically it holds on to the data only long enough to display it.
+
+
 
 ## ★ [Difference Between Value Type and Reference Type in Swift](https://medium.com/@abhimuralidharan/difference-between-value-type-and-a-reference-type-in-ios-swift-18cb5145ad7a)
 
