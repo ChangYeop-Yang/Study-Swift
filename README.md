@@ -319,6 +319,10 @@ println("\(x.data), \(y.data)")	// prints "42, 42"
 
 :airplane: [Value and Reference Types - Apple](https://developer.apple.com/swift/blog/?id=10)
 
+:airplane: [Delegates and Data Sources - Apple](https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/DelegatesandDataSources/DelegatesandDataSources.html)
+
+:airplane: [iOS ) 왕초보를 위한 delegate정리](https://zeddios.tistory.com/8)
+
 ## ★ Developer Information
 
 |:rocket: Github QR Code|:pencil: Naver-Blog QR Code|:eyeglasses: Linked-In QR Code|
