@@ -238,8 +238,6 @@ class SomeClass {
 
 * Private access restricts the use of an entity to the enclosing declaration, and to extensions of that declaration that are in the same file. Use private access to hide the implementation details of a specific piece of functionality when those details are used only within a single declaration.
 
-## ★ Protocol - 프로토콜
-
 ## ★ Delegate - 델리게이트
 
 |Delegates Image 001|Delegates Image 002|
