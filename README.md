@@ -208,6 +208,42 @@ class SomeClass {
 
 </p>
 
+## :mega: 고차 함수 (高次函數, Higher-order function)
+
+* 고차 함수(高次函數, higher-order function)는 수학과 컴퓨터 과학에서 적어도 다음 중 하나를 수행하는 함수이다.
+
+1. 하나 이상의 함수를 인수로 취한다. (예: 절차적 매개변수)
+
+2. 함수를 결과로 반환한다.
+
+* Swift에서의 고차함수는 MAP, CompactMAP, Filter, Reduce 등이 있다.
+
+## :mega: 클로저 (Closure)
+
+* 컴퓨터 언어에서 클로저(Closure)는 일급 객체 함수(first-class functions)의 개념을 이용하여 스코프(scope)에 묶인 변수를 바인딩 하기 위한 일종의 기술이다. 기능상으로, 클로저는 함수를 저장한 레코드(record)이며, 스코프(scope)의 인수(Factor)들은 클로저가 만들어질 때 정의(define)되며, 스코프 내의 영역이 소멸(remove)되었어도 그에 대한 접근(access)은 독립된 복사본인 클로저를 통해 이루어질 수 있다.
+
+```swift
+{ (매개 변수들) -> 반환 타입 in
+   실행 코드
+}
+```
+
+* 클로저란 코드의 블럭이자, 일급 객체로 완벽한 역할을 수행한다. 일급 객체란 전달 인자로 보낼 수 있고, 변수/상수 등으로 저장하거나 전달할 수 있으며, 함수의 반환 값이 될 수도 있다.
+
+```swift
+let action = UIAlertAction(title: String?, style: UIAlertActionStyle, handler ((UIAlertAction) -> Void)?)
+
+let action = UIAlertAction(title: "OK", style: .default) {
+  (UIAlertAction) in
+  // code
+}
+
+let action = UIAlertAction(title: "OK", style: .default) {
+  (action) in
+}
+
+```
+
 ## ★ Etc
 * 옵셔널 (Optinal)은 프로그램의 안정성을 높이기 위한 개념으로서 nil을 사용할 수 있는 타입과 사용할 수 없는 타입으로 구분하고 사용할 수 있는 타입을 가리켜 옵셔널 타입 (Optional Type)이라고 한다.
 
@@ -326,6 +362,8 @@ println("\(x.data), \(y.data)")	// prints "42, 42"
 :airplane: [Delegates and Data Sources - Apple](https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/DelegatesandDataSources/DelegatesandDataSources.html)
 
 :airplane: [iOS ) 왕초보를 위한 delegate정리](https://zeddios.tistory.com/8)
+
+:airplane: [Swift의 클로저 및 고차 함수 이해하기 - Realm](https://academy.realm.io/kr/posts/closure-and-higher-order-functions-of-swift/)
 
 ## ★ Developer Information
 
