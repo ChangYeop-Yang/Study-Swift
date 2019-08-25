@@ -316,7 +316,9 @@ println("\(x.data), \(y.data)")	// prints "42, 42"
 
 * **Value Type** - each instance keeps a unique copy of its data. A type that creates a new instance (copy) when assigned to a variable or constant, or when passed to a function. **(Get Stored on Stack Memory)**
 
+
 * **Reference Type** - each instances share a single copy of the data. A type that once initialized, when assigned to a variable or constant, or when passed to a function, returns a reference to the same existing instance. **(Get Stored on Managed Heap Memory)**
+
 
 |Value Type|Reference Type|
 |:--------:|:------------:|
