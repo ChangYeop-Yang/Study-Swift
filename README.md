@@ -28,7 +28,7 @@ Swift는 Apple이 iOS, Mac, Apple TV 그리고 Apple Watch 앱 개발용으로 �
   * 하나의 클래스 인스턴스를 여러 변수나 상수, 또는 함수의 인자값에서 동시에 참조할 수 있다는 특징이 있다.
   * 클래스 인스턴스는 여러곳에서 동시 참조가 가능하므로 한 곳에서의 참조가 완료되었다고 해도 마음대로 메모리 해제를 할 수 없는 특징이 있다. 다른 곳에서 해당 인스턴스를 계속 참조하고 있기 때문이다. 이를 방치할 경우 잘못된 메모리 참조 오류가 발생한다.
 
-## ★ Property - 프로퍼티
+## 📣 Property - 프로퍼티
 * 프로퍼티는 클래스나 구조체에 값을 제공하며 저장 프로퍼티와 연산 프로퍼티가 존재한다.
 
 * Properties associate values with a particular class, structure, or enumeration. Stored properties store constant and variable values as part of an instance, whereas computed properties calculate (rather than store) a value. Computed properties are provided by classes, structures, and enumerations. Stored properties are provided only by classes and structures.
